@@ -7,6 +7,11 @@ app.get("/", (req, res) => {
   res.json(jsonResponse);
 });
 
+app.get("/another-route", (req, res) => {
+  const jsonResponse = { message: "This is another route response for GET method!" };
+  res.json(jsonResponse);
+});
+
 
 const server = app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
